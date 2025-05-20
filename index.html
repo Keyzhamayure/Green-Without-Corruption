@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hijaukan Indonesia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🌿 Hijaukan Indonesia</h1>
+    <p>Perubahan iklim nyata — mari bertindak hari ini.</p>
+    <button id="theme-toggle">🌗 Tema Gelap</button>
+  </header>
+
+  <div class="hero-section">
+    <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1350&q=80" alt="Hutan Indonesia">
+    <div class="overlay-text">
+      <h2>Lindungi Bumi, Mulai dari Indonesia</h2>
+      <p>Kamu bisa jadi bagian dari perubahan!</p>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="fade-in">
+      <h2>🌏 Dampak Perubahan Iklim di Indonesia</h2>
+      <ul>
+        <li>Naiknya permukaan laut mengancam 199 kabupaten/kota pesisir</li>
+        <li>Perubahan cuaca ekstrem memperparah bencana alam</li>
+        <li>Kekeringan berdampak pada pertanian dan ketahanan pangan</li>
+        <li>Hutan tropis Indonesia terus menyusut akibat deforestasi</li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2>🧠 Quiz: Seberapa Ramah Lingkungan Kamu?</h2>
+      <div class="quiz">
+        <p>1. Apakah kamu hemat energi di rumah?</p>
+        <button onclick="jawabQuiz(1)">Ya</button>
+        <button onclick="jawabQuiz(0)">Tidak</button>
+
+        <p>2. Apakah kamu memilih transportasi ramah lingkungan?</p>
+        <button onclick="jawabQuiz(1)">Ya</button>
+        <button onclick="jawabQuiz(0)">Tidak</button>
+
+        <p>3. Apakah kamu menggunakan ulang barang yang bisa dipakai kembali?</p>
+        <button onclick="jawabQuiz(1)">Ya</button>
+        <button onclick="jawabQuiz(0)">Tidak</button>
+
+        <p>4. Apakah kamu menggunakan kendarran listrik?</p>
+        <button onclick="jawabQuiz(1)">Ya</button>
+        <button onclick="jawabQuiz(0)">Tidak</button>
+
+        <p><strong>Skor Kamu: <span id="quiz-score">0</span>/4</strong></p>
+
+      </div>
+    </section>
+
+    <section class="fade-in">
+      <h2>📊 Kalkulator Jejak Karbon</h2>
+      <label>Jarak kendaraan/hari (km): <input type="number" id="km" /></label><br>
+      <label>Makan daging/minggu: <input type="number" id="daging" /></label><br>
+      <button onclick="hitungKarbon()">Hitung</button>
+      <p id="hasil-karbon"></p>
+      <div class="info-daging">
+  <h3>Kenapa Makan Daging Mempengaruhi Iklim? 🥩</h3>
+  <p>
+    Produksi daging, terutama daging sapi dan kambing, menghasilkan emisi gas rumah kaca seperti metana (CH₄) dan karbon dioksida (CO₂) dalam jumlah besar.
+    Selain itu, peternakan skala besar memerlukan banyak air, pakan, dan lahan — yang sering berasal dari deforestasi hutan hujan tropis.
+  </p>
+  <p>
+    Mengurangi konsumsi daging, bahkan hanya beberapa kali seminggu, dapat secara signifikan menurunkan jejak karbon individu dan membantu memperlambat laju perubahan iklim.
+  </p>
+  <blockquote>
+    “Jika setiap orang di dunia mengurangi konsumsi daging, dampaknya setara dengan mengurangi jutaan mobil dari jalan.”
+  </blockquote>
+</div>
+
+    </section>
+
+    <section class="fade-in">
+      <h2>🌱 Ayo Dukung Penghijauan</h2>
+      <p>Kamu bisa mendukung penanaman pohon dan konservasi melalui:</p>
+      <ul>
+        <li>Donasi melalui <a href="https://kitabisa.com" target="_blank">Kitabisa.com</a></li>
+        <li>Ikut gerakan menanam pohon di kotamu</li>
+        <li>Gabung komunitas lingkungan lokal</li>
+      </ul>
+<button id="dukung-btn">💚 Saya Siap Berkontribusi</button>
+<p id="dukung-feedback" class="hidden">
+  Terima kasih! Sudah ada <span id="counter">0</span> orang yang siap berkontribusi 🌍
+</p>
+
+<section class="fade-in">
+  <h2>🪵 Deforestasi di Indonesia (2019–2023)</h2>
+  <p>
+    Selama 5 tahun terakhir, Indonesia kehilangan jutaan hektar hutan akibat alih fungsi lahan, kebakaran hutan, dan pembukaan untuk perkebunan.
+  </p>
+  <ul>
+    <li>🌲 2019: 462.000 hektar hilang</li>
+    <li>🔥 2020: 115.000 hektar (menurun karena kebijakan moratorium)</li>
+    <li>🪵 2021: 104.000 hektar</li>
+    <li>🌾 2022: 113.500 hektar</li>
+    <li>📉 2023: 86.000 hektar</li>
+  </ul>
+  <p>
+    Meski tren deforestasi menurun, ancaman tetap besar. Komitmen kita menjaga hutan Indonesia sangat penting untuk stabilitas iklim global.
+  </p>
+</section>
+
+    </section>
+
+    <section class="progress-section fade-in">
+      <h2>📈 Kamu Sudah Scroll Sekian Jauh 🌿</h2>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hijaukan Indonesia | Bersama untuk bumi 🌍</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
